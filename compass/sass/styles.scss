@@ -1,0 +1,74 @@
+//Variables
+//===============================
+@import "configs/_variables.scss";
+@import "configs/mixins.scss";
+
+
+//Layout
+//===============================
+@import "layout/layout.scss";
+@import "layout/header.scss";
+@import "layout/footer.scss";
+
+//Pages/Views
+//===============================
+@import "views/home.scss";
+
+.float-and-black{
+	float: left;
+	background-color: black;
+}
+
+#parent{
+	width: 75%;
+	float: left;
+	background-color:red;
+	.child{
+		width: 50%;
+		margin: auto;
+		background-color: white;
+		ul{
+			list-style: none;
+			li{
+				font-size: 20px;
+				color: red;
+			}
+		}
+		// &.grandchild{
+			//the way this is written, the grandchild rules only apply when there is child and grandchild. 
+			//these rules only apply when it has a class of child and grandchild and it's inside the parent. You can use .child.grandchild{} and it will be the same thing.
+		// }
+	}
+}
+
+#parent2{
+	@extend .float-and-black;
+	width: 25%;
+	float: left;
+	background-color: blue;
+	li{
+		font-size: 60px;
+		color: white;
+	}
+}
+
+//target child classes inside of parent for clarity in case there are other CSS also applied to child
+//The whole thing is nested in #parent!
+// .#parent .child, #parent2 .child{
+// 	width: 50%;
+// 	margin: auto;
+// 	background-color: white;
+// }
+
+
+//Crazy organiazation and nesting!
+
+// .nav{
+// 	.menu-bar{
+// 		.left{
+// 			.right{
+
+// 			}
+// 		}
+// 	}
+// }

@@ -1,0 +1,28 @@
+1. What does Compass do?
+- Watches a specific folder based on config.rb
+- Converts/interprets/writes the SASS it finds into csss
+
+
+
+2. What does SASS do?
+- Lazy.
+- Compass does all the work. SASS is a syntax just like JSX. It's useful to devs to write CSS fast. 
+- It MUST be turned into CSSS to be useful.
+
+
+
+3. What does config.rb do?
+- Ruby file
+- Tells compass what to do!
+- (Compass is looking for it)
+	-tells Compas what to look for (scss)
+	-tells Compass where to look(inside /sass/)
+	-Tells Compass where to write (../public/stylesheets)
+- Compass is a Ruby gem
+
+
+
+4. Why is the file in public/stylesheets called styles.css?
+- Because Compass is:
+	1. Watching the /sass directiory
+	2. There is a file called "styles" that is a .scss file there

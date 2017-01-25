@@ -1,0 +1,17 @@
+// -------------------------------
+// _HEADER.SCSS
+// Global Header styles
+// -------------------------------
+
+
+
+//We have isolated all the css that that goes into header into this file!
+#header{
+	.menu-items{
+		li{
+			float: left;
+			list-style: none;
+			color: blue;
+		}
+	}
+}
